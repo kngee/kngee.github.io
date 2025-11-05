@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kngee.github.io/al-folio/sitemap.xml
+Sitemap: https://kngee.github.io/sitemap.xml
