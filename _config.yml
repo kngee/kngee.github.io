@@ -10,11 +10,10 @@ contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+footer_text: 
 keywords: kenna geleta, kenna, geleta, nemera, kenna nemera # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔗 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 🌍 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://kngee.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -46,7 +45,7 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
@@ -149,7 +148,7 @@ collections:
       layout: post
     output: true
   projects:
-    output: true
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -631,12 +630,5 @@ jsonresume:
   - basics
   - work
   - education
-  - publications
-  - projects
-  - volunteer
   - awards
-  - certificates
-  - skills
   - languages
-  - interests
-  - references

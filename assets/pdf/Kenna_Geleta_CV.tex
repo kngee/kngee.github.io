@@ -1,0 +1,335 @@
+%2025-12-14%
+%Academic CV LaTeX Template - Populated for Kenna N. Geleta
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+
+% Font options
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{KENNA N. GELETA}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \href{mailto:kenna.geleta@tuks.co.za}{kenna.geleta@tuks.co.za} | 
+    \href{https://kngee.github.io/}{kngee.github.io}
+    }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faGithub} \href{https://github.com/kngee}{kngee}
+    }
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{Pretoria, Gauteng, South Africa}
+\end{center}
+
+\vspace{-4mm}
+
+\section{\textbf{Objective}}
+\vspace{1mm}
+\small{
+Seeking opportunities to collaborate on challenging software development projects and contribute to solving complex industry problems. Passionate about leveraging mathematical thinking and optimization techniques to build efficient, scalable systems. Eager to work in team environments where innovative solutions are developed through collaboration and where technical excellence drives impact.
+}
+\vspace{-2mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of Pretoria [\href{https://www.up.ac.za/}{\faIcon{globe}}]}{Pretoria, South Africa}
+{Bachelor of Engineering (BEng) - Computer Engineering}{Jan 2023 - Present}
+\resumeItemListStart
+\item Dean's Merit List 2023 and 2024
+\item Distinction for all modules in Year 1 (10/10 modules) and Year 2 (12/12 modules)
+\item 3rd Place - Top Achievers in Computer Engineering First Year
+\item 2nd Place - EPE 320 Software Engineering BBD Project Competition
+\resumeItemListEnd
+
+\resumeSubheading
+{Ferdinand Postma High School}{Potchefstroom, South Africa}
+{National Senior Certificate (Matriculation)}{Jan 2018 - Dec 2022}
+\resumeItemListStart
+\item 7/7 Subject Distinctions
+\item Class Rank: 1st out of approximately 95 students (2019-2022)
+\item Top 20 Matriculants in Dr. Kenneth Kaunda District
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Nano-Micro Manufacturing Facility, University of Pretoria [\href{https://nmmf.co.za/}{\faIcon{globe}}]}{Pretoria, South Africa}
+      {Intern - Printed Electronics Focus Group}{Jul 2025 - Dec 2025}
+      \resumeItemListStart
+        \item Developed and debugged firmware and software for a prototype commercial gas sensor array designed for agricultural applications using Python and C
+        \item Engineered an Electronic-Nose system to monitor and safeguard printing rooms from high levels of toxic fumes, ensuring workplace safety
+        \item Conducted algorithm optimization for sensor data processing to improve accuracy and response time
+        \item Collaborated with researchers to integrate hardware and software components for embedded sensor systems
+      \resumeItemListEnd 
+      
+  \resumeSubheading
+    {University of Pretoria}{Pretoria, South Africa}
+    {Tutor - ERS 220 Digital Systems}{Jan 2025 - Present}
+    \resumeItemListStart
+      \item Assisted students in understanding digital circuit design, logic systems, and hardware description languages
+      \item Conducted tutorial sessions helping students debug digital system implementations
+      \item Provided guidance on course assignments and practical implementations
+    \resumeItemListEnd
+    
+  \resumeSubheading
+    {University of Pretoria}{Pretoria, South Africa}
+    {Tutor - ELI 220 Linear Systems and Signals}{Jan 2025 - Present}
+    \resumeItemListStart
+      \item Tutored students in signal processing, Fourier analysis, and linear system theory
+      \item Helped students grasp mathematical concepts and their applications in engineering
+    \resumeItemListEnd
+    
+  \resumeSubheading
+    {University of Pretoria}{Pretoria, South Africa}
+    {Tutor - COS 110 Object Oriented Programming}{Jan 2024 - Dec 2024}
+    \resumeItemListStart
+      \item Guided first-year students in learning fundamental programming concepts using C++
+      \item Assisted in debugging code and explaining object-oriented design principles
+      \item Helped students develop problem-solving skills through systematic algorithmic thinking
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages:}
+    {C++, Python, C, Java, JavaScript}
+  \resumeSubItem{Embedded Systems \& Hardware:}
+    {Firmware Development, Sensor Systems, Digital Circuit Design, Hardware Description Languages}
+  \resumeSubItem{Software Development:}
+    {Algorithm Optimization, Debugging, System Integration, Object-Oriented Design}
+  \resumeSubItem{Data Analysis \& Processing:}
+    {Signal Processing, Sensor Data Analysis, Mathematical Modeling}
+  \resumeSubItem{Version Control:}
+    {Git, GitHub}
+  \resumeSubItem{Problem-Solving:}
+    {Competitive Programming, Algorithm Design, Optimization Techniques, Systematic Analysis}
+  \resumeSubItem{Teaching \& Communication:}
+    {Tutoring, Technical Explanation, Collaborative Problem-Solving}
+ \resumeHeadingSkillEnd
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {International Olympiad in Informatics (IOI) - Team Member}
+  {International Olympiad in Informatics}
+  {Aug 2022}
+  {{}}
+\resumeItemListStart
+  \item Selected to represent South Africa at the 2022 IOI held in Indonesia
+  \item One of the top 4 high school programmers selected nationally
+  \item Demonstrated advanced algorithmic problem-solving and programming skills
+\resumeItemListEnd
+
+\resumeProject
+  {South African Programming Olympiad (SAPO) - Provincial Winner}
+  {IITPSA}
+  {2021 \& 2022}
+  {{}}
+\resumeItemListStart
+  \item Winner of the South African Programming Olympiad in North West Province (2021 and 2022)
+  \item Top 10 placement in National Round of SAPO (2021 and 2022)
+  \item Consistently demonstrated excellence in competitive programming
+\resumeItemListEnd
+
+\resumeProject
+  {South African Mathematical Olympiad - Top 3}
+  {South African Mathematical Olympiad}
+  {May 2022}
+  {{}}
+\resumeItemListStart
+  \item Top 3 Performance in North West Province for Senior Competition
+  \item Demonstrated strong mathematical reasoning and problem-solving abilities
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+
+\section{\textbf{Additional Information}}
+\vspace{-0.4mm}
+\small{
+\textbf{Languages:} English (Native), Afrikaans (Intermediate)
+
+\textbf{Interests:} Optimization and algorithm design, embedded systems and sensor technology, competitive programming, mathematics, test cricket, globalism
+}
+\vspace{-4mm}
+
+\section{\textbf{References}}
+\vspace{-0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*,labelsep=2mm]
+\item \textbf{Dr. Anna Bosman}\\
+   Senior Lecturer, Department of Computer Science\\
+   University of Pretoria\\
+   Email: anna.bosman@up.ac.za\\
+   \href{https://www.up.ac.za/computer-science/view/staffprofile/1261}{\textcolor{darkblue}{Staff Profile}}
+
+\item \textbf{Prof. Trudi Joubert}\\
+   Professor, Department of Electrical, Electronic and Computer Engineering\\
+   University of Pretoria\\
+   Email: trudi.joubert@up.ac.za\\
+   \href{https://www.up.ac.za/electronics-and-microelectronics-/view/staffprofile/14125}{\textcolor{darkblue}{Staff Profile}}
+\end{enumerate}
+}
+
+\end{document}

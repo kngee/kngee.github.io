@@ -1,15 +1,28 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Track if a theme toggle is in progress to prevent multiple rapid clicks
+let isTogglingTheme = false;
+
+// Toggle between light and dark theme settings only (no system setting).
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
+  // Prevent multiple rapid clicks
+  if (isTogglingTheme) {
+    return;
   }
+  
+  isTogglingTheme = true;
+  
+  let themeSetting = determineThemeSetting();
+  if (themeSetting == "dark") {
+    setThemeSetting("light");
+  } else {
+    setThemeSetting("dark");
+  }
+  
+  // Reset the flag after transition completes
+  setTimeout(() => {
+    isTogglingTheme = false;
+  }, 400);
 };
 
 // Change the theme setting and apply the theme.
@@ -248,7 +261,7 @@ let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");
-  }, 500);
+  }, 400);
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
@@ -285,10 +298,14 @@ let initTheme = () => {
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
+    
+    if (mode_toggle) {
+      // Use a more reliable event listener with passive option for better performance
+      mode_toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleThemeSetting();
+      }, { passive: false });
+    }
   });
 
   // Add event listener to the system theme preference change.
